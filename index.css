@@ -1,0 +1,20 @@
+@import url('./normalize.css');
+
+#jumbotron {
+  width: 100vw;
+  background-color: black;
+}
+
+.content-container {
+  padding: 100px;
+}
+
+.kg-solid {
+  font-family: 'KG Second Chances Solid';
+  color: white;
+}
+
+.kg-sketch {
+  font-family: 'KG Second Chances Sketch';
+  color: white;
+}

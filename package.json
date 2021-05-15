@@ -1,0 +1,15 @@
+{
+  "name": "ss-guide",
+  "version": "1.0.0",
+  "description": "The scholarship survival guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "yarn parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.0.0-beta.2"
+  }
+}
