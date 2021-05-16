@@ -2,10 +2,10 @@
   "name": "ss-guide",
   "version": "1.0.0",
   "description": "The scholarship survival guide",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "yarn parcel index.html"
+    "start:dev": "yarn parcel index.html",
+    "build": "yarn parcel build index.html --dist-dir public"
   },
   "author": "",
   "license": "ISC",
