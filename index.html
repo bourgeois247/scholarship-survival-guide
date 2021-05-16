@@ -4,24 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;400&display=swap" rel="stylesheet">
     <link href="./index.scss" type="text/css" rel="stylesheet" />
     <title>The Scholarship Survival Guide</title>
   </head>
   <body>
     <section id="jumbotron" class="content-container">
-      <h2 class="kg-sketch">Sample text</h2>
-      <h2 class="kg-solid">Sample text with font</h2>
+      <nav>
+        <img alt="The survival guide logo" src="./assets/imgs/logo.svg" />
+        <div class="links">
+          <a href="#about">About Me</a>
+          <a href="#how">How It Works</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#blog">Blog</a>
+          <a href="#sign-up">Contact</a>
+        </div>
+      </nav>
+      <div class="title">
+        <h1 class="kg-sketch">Get World Class Education</h1>
+        <h1 class="kg-solid">Without The World Class Fees</h1>
+        <a href="#how" class="btn lg">show me how</a>
+      </div>
     </section>
     <section id="about" class="content-container">
-
+      <div class="baby'm">
+        <img id="jessica" alt="Jessica C. Linus" src="./assets/imgs/jessica.svg" />
+      </div>
+      <div class="content">
+        <div class="title">
+          <h2 class="kg-sketch">Hi,</h2>
+          <h2 class="kg-solid">I'm Jessica.</h2>
+        </div>
+        <p>
+          I’m going to teach you how you how to get world class education for free with scholarships. But first, let me tell
+          you
+          why I’m qualified to do so. Here’s a list of scholarships I’ve gotten thus far.
+        </p>
+        <div id="table">
+          <div class="row headers">
+            <p class="heading scholarship">Scholarship</p>
+            <p class="heading amount">Amount</p>
+            <p class="heading when">When</p>
+          </div>
+          <div class="row">
+            <p class="scholarship">Foreign Language Areas Study Fellow (Learning Hindi)</p>
+            <p class="amount">$25, 000</p>
+            <p class="when">Jul 2020</p>
+          </div>
+          <div class="row">
+            <p class="scholarship">Fulbright Fellow</p>
+            <p class="amount">$25, 000</p>
+            <p class="when">Jul 2020</p>
+          </div>
+          <div class="row">
+            <p class="scholarship">Maxwell school</p>
+            <p class="amount">$25, 000</p>
+            <p class="when">Jul 2020</p>
+          </div>
+          <div class="row bottom">
+            <p class="heading scholarship">Total</p>
+            <p class="heading amount">$150k</p>
+            <p class="heading amount"></p>
+          </div>
+        </div>
+        <div class="le-petit-banner">
+          <img id="banner-main" src="./assets/imgs/small-banner.svg" />
+          <svg id="banner-shadow" width="809" height="89" viewBox="0 0 809 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.82778 10.0879C-1.68785 6.92657 0.540402 0.807373 5.26838 0.807373H809V88.8975H13.274C7.93791 88.8975 5.88096 80.8195 10.3321 77.8766C24.3479 68.6101 39.6244 55.0418 32.0911 43.3509C24.3725 31.3724 11.1805 18.4981 1.82778 10.0879Z"
+              fill="#9D634E" />
+          </svg>
+          <h3 id="text">I spent $0 on a $100k degree. Let that sink in.</h3>
+        </div>
+      </div>
     </section>
     <section id="pedigree" class="content-container">
-    
+      <div class="border"></div>
+      <div id="imgs">
+        <img src="./assets/imgs/flas.jpg" />
+        <img src="./assets/imgs/fulbright.jpg" />
+        <img src="./assets/imgs/iie.jpg" />
+        <img src="./assets/imgs/max.jpg" />
+      </div>
+      <div class="border"></div>
     </section>
     <section id="how" class="content-container">
       <div class="title">
         <h2 class="kg-sketch">Wow But How?</h2>
         <h2 class="kg-solid">I'll Tell You</h2>
+        <div class="content">
+          <div class="item">
+            <div class="square">
+              <img src="./assets/imgs/briefcase.svg" />
+            </div>
+            <div class="summary">
+              <h3 class="header kg-solid">Internships (Paid & Unpaid)</h3>
+              <p>
+                Is you gonna ride for me?
+              </p>
+            </div>
+          </div>
+          <div class="item reverse">
+            <div class="square">
+              <img src="./assets/imgs/note.svg" />
+            </div>
+            <div class="summary">
+              <h3 class="header kg-solid">Personal Statements</h3>
+              <p>
+                Is you gonna ride for me?
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="square">
+              <img src="./assets/imgs/gift.svg" />
+            </div>
+            <div class="summary">
+              <h3 class="header kg-solid">Scholarships</h3>
+              <p>
+                Is you gonna ride for me?
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="reviews" class="content-container">
@@ -29,20 +135,66 @@
         <h2 class="kg-sketch">What Are People Saying?</h2>
         <h2 class="kg-solid">See For Yourself</h2>
       </div>
+      <div class="content">
+        <div class="bubble">
+          <img class="photo" />
+          <p>Lorem Ipsum</p>
+        </div>
+      </div>
     </section>
     <section id="blog" class="content-container">
       <div class="title">
         <h2 class="kg-sketch">Need Some Tips & Tricks?</h2>
         <h2 class="kg-solid">Check Out Our Blog</h2>
       </div>
+
+      <div class="articles">
+        <div class="article">
+          <h4 class="header">The Secrets of A Great CV</h4>
+          <p>
+            Words That Perfectly Explain Why This Particular Section Is Amazing.
+          </p>
+          <a class="read-more" href="">Read Full Article &rarr;</a>
+        </div>
+
+        <div class="article">
+          <h4 class="header">The Secrets of A Great CV</h4>
+          <p>
+            Words That Perfectly Explain Why This Particular Section Is Amazing.
+          </p>
+          <a class="read-more" href="">Read Full Article &rarr;</a>
+        </div>
+
+        <div class="article">
+          <h4 class="header">The Secrets of A Great CV</h4>
+          <p>
+            Words That Perfectly Explain Why This Particular Section Is Amazing.
+          </p>
+          <a class="read-more" href="">Read Full Article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="cta-container">
+        <a class="btn" href="">Keep Reading</a>
+      </div>
+      
     </section>
     <section id="sign-up" class="content-container">
       <div class="title">
         <h2 class="kg-solid">Take The First Step. Join Our Community!</h2>
       </div>
+
+      <p class="preamble">
+        Receive notifications on scholarships, internships and the tools you need to secure them. <br/>
+        Take your career to the next level with International opportunities.
+      </p>
+      <form>
+        <input id="email-input" placeholder="What's Your Email Address?" />
+        <button class="btn lg" href="">Sign Up</button>
+      </form>
     </section>
     <footer>
-
+      <p class="copy-copy">&copy; 2021 Copyright - The Scholarship Survival Guide.</copyright>
     </footer>
   </body>
 </html>

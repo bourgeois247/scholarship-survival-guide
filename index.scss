@@ -1,6 +1,10 @@
 @import './normalize.css';
 @import './utils';
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1 {
   font-size: remCalc(40);
 }
@@ -10,11 +14,17 @@ h2 {
 }
 
 h3 {
+  font-size: remCalc(24);
+}
+
+h4 {
   font-size: remCalc(19);
 }
 
 p {
   font-size: 1rem;
+  line-height: 1.5rem;
+  color: map-get($brown, darker);
 }
 
 .kg-solid, .kg-sketch {
@@ -29,13 +39,54 @@ p {
   font-family: 'KG Second Chances Sketch';
 }
 
+.btn {
+  display: inline-block;
+  background-color: map-get($brown, base);
+  padding: remCalc(10) remCalc(20);
+  box-shadow: -4px -3px 0px map-get($brown, darker);
+  color: white;
+  font-size: remCalc(16);
+  font-family: 'KG Second Chances Solid';
+  text-transform: uppercase;
+
+  &.lg {
+    padding: remCalc(15) remCalc(30);
+    font-size: remCalc(18)
+  }
+}
+
 #jumbotron {
   width: 100vw;
   background-color: map-get($pink, base);
   padding-top: remCalc(30);
 
   nav {
+    display: flex;
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+      display: flex;
+      color: map-get($brown, base);
+
+      a:hover {
+        font-weight: bold;
+      }
+
+      a:not(:last-of-type) {
+        margin-right: remCalc(35);
+      }
+    }
+  }
+
+  .title {
+    text-align: center;
+    margin-top: remCalc(90);
+
+    .btn {
+      margin-top: remCalc(30);
+    }
   }
 }
 
@@ -44,33 +95,260 @@ p {
 
   .title {
     text-align: center;
+     margin-bottom: remCalc(40);
   }
 }
 
 #about {
+  position: relative;
+  display: flex;
   background-color: map-get($pink, darker);
+  overflow-x: hidden;
+
+  .content {
+    margin-left: remCalc(45);
+  }
+
+  .title {
+    text-align: left;
+    margin-bottom: remCalc(45);
+  }
+
+  #jessica {
+    width: 20rem;
+    height: auto;
+  }
+
+  #table {
+    width: 100%;
+    margin-top: remCalc(60);
+    margin-bottom: remCalc(150);
+  
+    .headers, .bottom {
+      margin-bottom: remCalc(30);
+    }
+
+    .heading {
+      font-size: remCalc(18);
+      color: map-get($brown, dark);
+      font-weight: bold
+    }
+
+    .row {
+      display: flex;
+      color: map-get($brown, darker);
+
+      &:not(.headers) {
+        margin-top: remCalc(20);
+        padding-bottom: 1rem;
+        border-bottom: 1px solid transparentize(map-get($brown, base), 0.7);
+      }
+    }
+
+    .scholarship {
+      flex: 1;
+    }
+
+    .amount, .when {
+      width: 10rem;
+      text-align: center;
+    }
+  }
+
+  .le-petit-banner {
+    position: absolute;
+    right: -2.375rem;
+    bottom: 10rem;
+    width: 43rem;
+
+    #banner-main, #banner-shadow {
+      position: absolute;
+      width: 100%;
+    }
+  
+    #banner-main {
+      z-index: 5;
+    }
+
+    #banner-shadow {
+      top: remCalc(-15);
+      left: remCalc(-30);
+    }
+
+    #text {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      top: 1.5rem;
+      left: 3.5rem;
+      color: white;
+      font-family: 'KG Second Chances Solid';
+    }
+  }
 }
 
 #pedigree {
   background-color: white;
+  padding: 0;
+
+  .border {
+    background-color: $grey;
+    width: 100%;
+    height: remCalc(5);
+  }
+
+  #imgs {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 0.7;
+
+    img {
+      height: fit-content;
+      margin: remCalc(20) remCalc(50);
+    }
+  }
 }
 
 #how {
-  background-color: map-get($pink, base)
+  background-color: map-get($pink, base);
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: remCalc(30);
+  }
+
+  .item {
+    display: flex;
+
+    .square {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: map-get($pink, darker);
+      width: remCalc(200);
+      height: remCalc(168);
+      margin-right: remCalc(40);
+      border: 5px solid map-get($brown, darker);
+      box-shadow: -10px 10px map-get($brown, darker);
+
+      img {
+        width: 40%;
+      }
+    }
+
+    .summary {
+      margin-top: 2rem;
+      text-align: left;
+
+      .header {
+        margin-bottom: remCalc(10);
+        color: map-get($brown, dark);
+      }
+    }
+
+    &.reverse {
+      justify-content: flex-end;
+
+      .square img {
+        width: 30%;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: remCalc(150);
+    }
+  }
 }
 
 #reviews {
   background-color: $dark-green;
+
+  .bubble {
+    display: flex;
+    background-color: white;
+    width: fit-content;
+    padding: remCalc(30) remCalc(50);
+    box-shadow: 5px 5px map-get($brown, darker);
+
+    .photo {
+      background-color: map-get($brown, dark);
+      width: remCalc(80);
+      height: remCalc(80);
+      margin-right: remCalc(25);
+      border-radius: 50%;
+    }
+  }
 }
 
 #blog {
-  background-color: map-get($pink, dark)
+  background-color: map-get($pink, dark);
+
+  .articles {
+    display: flex;
+    justify-content: space-between;
+    margin: remCalc(100) 0 remCalc(60) 0;
+
+    .article {
+      background-color: map-get($pink, dark);
+      max-width: 30%;
+      padding: remCalc(45);
+      border: 4px solid map-get($brown, darker);
+      box-shadow: -5px -5px map-get($brown, darker);
+    }
+
+    .header {
+      margin-bottom: remCalc(25);
+      color: map-get($brown, dark);
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    .read-more {
+      display: inline-block;
+      color: map-get($brown, dark);
+      margin-top: remCalc(20);
+    }
+  }
+
+  .cta-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 #sign-up {
-  background-color: map-get($pink, darker)
+  background-color: map-get($pink, darker);
+  text-align: center;
+
+  .preamble {
+    margin: remCalc(35) 0 remCalc(25) 0;
+  }
+
+  #email-input {
+    display: block;
+    background-color: map-get($pink, dark);
+    width: 60%;
+    margin: 0 auto remCalc(32) auto;
+    text-align: center;
+    padding: remCalc(20);
+    box-shadow: 5px 5px transparentize(map-get($brown, darker), 0.5);
+  }
 }
 
 footer {
-  background-color: map-get($pink, dark)
+  display: flex;
+  align-items: center;
+  background-color: map-get($pink, dark);
+  height: remCalc(150);
+  padding: remCalc(60) remCalc(100);
+
+  .copy-copy {
+    margin-top: remCalc(14);
+    color: map-get($brown, darker);
+    font-size: remCalc(14);
+    font-weight: bold;
+  }
 }
