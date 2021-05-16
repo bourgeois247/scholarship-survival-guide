@@ -10,7 +10,7 @@
   font-style: normal;
   font-weight: 700;
   src: local('KG Second Chances Solid'),
-    url('./assets/fonts/KgSecondChancesSolid.ttf') format('ttf');
+    url('./assets/fonts/KgSecondChancesSolid.ttf') format('truetype');
 }
 
 @font-face {
@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 700;
   src: local('KG Second Chances Sketch'),
-    url('./assets/fonts/KgSecondChancesSketch.ttf') format('ttf');
+    url('./assets/fonts/KgSecondChancesSketch.ttf') format('truetype');
 }
 
 * {
