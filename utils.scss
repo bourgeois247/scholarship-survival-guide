@@ -1,0 +1,24 @@
+/**
+ * Varaible Definitions
+ */
+$pink: (
+  base: #F9F0EA,
+  dark: #F7E9E0,
+  darker: #EFD4C3,
+);
+
+$brown: (
+  base: #DB8667,
+  dark: #D67454,
+  darker: #9D634E,
+);
+
+$grey: #919191;
+$dark-green: #52523E;
+/**
+ * End Varaible Definitions
+ */
+ 
+@function remCalc($value) {
+  @return ($value / 16) + rem;
+}

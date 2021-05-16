@@ -1,0 +1,76 @@
+@import './normalize.css';
+@import './utils';
+
+h1 {
+  font-size: remCalc(40);
+}
+
+h2 {
+  font-size: remCalc(33);
+}
+
+h3 {
+  font-size: remCalc(19);
+}
+
+p {
+  font-size: 1rem;
+}
+
+.kg-solid, .kg-sketch {
+  color: map-get($brown, dark)
+}
+
+.kg-solid {
+  font-family: 'KG Second Chances Solid';
+}
+
+.kg-sketch {
+  font-family: 'KG Second Chances Sketch';
+}
+
+#jumbotron {
+  width: 100vw;
+  background-color: map-get($pink, base);
+  padding-top: remCalc(30);
+
+  nav {
+    width: 100%;
+  }
+}
+
+.content-container {
+  padding: 100px;
+
+  .title {
+    text-align: center;
+  }
+}
+
+#about {
+  background-color: map-get($pink, darker);
+}
+
+#pedigree {
+  background-color: white;
+}
+
+#how {
+  background-color: map-get($pink, base)
+}
+
+#reviews {
+  background-color: $dark-green;
+}
+
+#blog {
+  background-color: map-get($pink, dark)
+}
+
+#sign-up {
+  background-color: map-get($pink, darker)
+}
+
+footer {
+  background-color: map-get($pink, dark)
+}
