@@ -42,25 +42,30 @@ p {
 .btn {
   display: inline-block;
   background-color: map-get($brown, base);
-  padding: remCalc(10) remCalc(20);
+  padding: remCalc(15) remCalc(30);
   box-shadow: -4px -3px 0px map-get($brown, darker);
   color: white;
-  font-size: remCalc(16);
+  font-size: remCalc(18);
   font-family: 'KG Second Chances Solid';
   text-transform: uppercase;
-
-  &.lg {
-    padding: remCalc(15) remCalc(30);
-    font-size: remCalc(18)
-  }
 }
 
 #jumbotron {
+  position: relative;
   width: 100vw;
-  background-color: map-get($pink, base);
+  background-color: map-get($pink, dark);
   padding-top: remCalc(30);
 
+  #jumbo-milky-tr {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0vw;
+  }
+
   nav {
+    position: relative;
+    z-index: 5;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -81,6 +86,8 @@ p {
   }
 
   .title {
+    position: relative;
+    z-index: 5;
     text-align: center;
     margin-top: remCalc(90);
 
@@ -211,7 +218,22 @@ p {
 }
 
 #how {
+  position: relative;
   background-color: map-get($pink, base);
+
+  #how-milky-tl {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  #how-milky-br {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+  }
 
   .content {
     display: flex;
@@ -220,6 +242,8 @@ p {
   }
 
   .item {
+    position: relative;
+    z-index: 5;
     display: flex;
 
     .square {
@@ -259,6 +283,20 @@ p {
     &:not(:last-of-type) {
       margin-bottom: remCalc(150);
     }
+  }
+
+  #internships-connector {
+    position: absolute;
+    top: 100%;
+    left: remCalc(200);
+    width: 50%;
+  }
+
+  #statements-connector {
+    position: absolute;
+    top: 50%;
+    right: 31.5rem;
+    width: 50%;
   }
 }
 
