@@ -165,7 +165,7 @@ p {
   .le-petit-banner {
     position: absolute;
     right: -2.375rem;
-    bottom: 10rem;
+    bottom: 15rem;
     width: 43rem;
 
     #banner-main, #banner-shadow {
@@ -303,12 +303,22 @@ p {
 #reviews {
   background-color: $dark-green;
 
-  .bubble {
+  .content {
     display: flex;
-    background-color: white;
-    width: fit-content;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: remCalc(100);
+  }
+
+  .review {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 28%;
+    height: remCalc(140);
     padding: remCalc(30) remCalc(50);
-    box-shadow: 5px 5px map-get($brown, darker);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 300ms ease-out;
 
     .photo {
       background-color: map-get($brown, dark);
@@ -316,6 +326,23 @@ p {
       height: remCalc(80);
       margin-right: remCalc(25);
       border-radius: 50%;
+    }
+
+    .text {
+      color: $dark-green;
+    }
+
+    &:not(.active):hover {
+      background-color: white;
+      transition: all 300ms ease-in;
+    }
+
+    &.active {
+      background-color: rgba(255, 255, 255, 1);
+      width: 33%;
+      height: remCalc(210);
+      box-shadow: 5px 5px 0 map-get($brown, dark);
+      transition: all 300ms ease-in;
     }
   }
 }
@@ -377,16 +404,28 @@ p {
 }
 
 footer {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
   background-color: map-get($pink, dark);
   height: remCalc(150);
   padding: remCalc(60) remCalc(100);
 
   .copy-copy {
+    justify-self: flex-start;
     margin-top: remCalc(14);
     color: map-get($brown, darker);
     font-size: remCalc(14);
     font-weight: bold;
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      display: inline-block;
+      margin-right: remCalc(15);
+    }
   }
 }
