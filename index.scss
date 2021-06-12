@@ -174,7 +174,7 @@ p {
   .le-petit-banner {
     position: absolute;
     right: -2.375rem;
-    bottom: 10rem;
+    bottom: 5rem;
     width: 43rem;
 
     #banner-main, #banner-shadow {
@@ -424,6 +424,7 @@ footer {
     color: map-get($brown, darker);
     font-size: remCalc(14);
     font-weight: bold;
+    text-align: center;
   }
 
   .socials {
