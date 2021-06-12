@@ -3,6 +3,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -25,6 +26,10 @@ p {
   font-size: 1rem;
   line-height: 1.5rem;
   color: map-get($brown, darker);
+}
+
+.hide {
+  display: none;
 }
 
 .kg-solid, .kg-sketch {
@@ -162,10 +167,14 @@ p {
     }
   }
 
+  .scholar-card {
+    display: none;
+  }
+
   .le-petit-banner {
     position: absolute;
     right: -2.375rem;
-    bottom: 15rem;
+    bottom: 10rem;
     width: 43rem;
 
     #banner-main, #banner-shadow {
@@ -407,12 +416,11 @@ footer {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   background-color: map-get($pink, dark);
-  height: remCalc(150);
   padding: remCalc(60) remCalc(100);
 
   .copy-copy {
     justify-self: flex-start;
-    margin-top: remCalc(14);
+    align-self: center;
     color: map-get($brown, darker);
     font-size: remCalc(14);
     font-weight: bold;
@@ -426,6 +434,183 @@ footer {
     a {
       display: inline-block;
       margin-right: remCalc(15);
+    }
+  }
+}
+
+/***************************
+ * Mobile Styles
+ ***************************/
+
+@media screen and (max-device-width: 40rem) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.3rem;
+    font-size: 0.8rem;
+  }
+
+  #jumbotron.content-container {
+    padding-bottom: remCalc(50);
+  }
+
+  #jumbotron .title {
+    margin-top: 3rem;
+  }
+
+  #jumbotron nav .links {
+    display: none;
+  }
+
+  .content-container {
+    padding: remCalc(100) remCalc(25);
+  }
+
+  #tss-logo {
+    width: remCalc(150);
+  }
+
+  #about {
+    flex-direction: column;
+
+    #jessica {
+      width: 15rem;
+    }
+
+    #babym {
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      margin: 0;
+    }
+
+    #table {
+      display: none;
+    }
+    
+    .le-petit-banner {
+      display: none;
+    }
+
+    .scholar-card {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      width: 100%;
+      padding: 1rem;
+      margin-top: 2rem;
+      border: 3px solid map-get($brown, darker);
+      box-shadow: -5px 5px map-get($brown, darker);
+
+      .content-area {
+        flex: 1;
+      }
+
+      .date {
+        margin-bottom: 1rem;
+        color: #aaa;
+      }
+
+      .amount {
+        margin: 0;
+        margin-bottom: 1px;
+        font-weight: bold;
+        font-family: 'KG Second Chances Solid';
+        color: map-get($brown, dark);
+      }
+
+      .title {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+        color: map-get($brown, darker);
+      }
+    
+      .logo {
+        width: 4rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &.fulbright {
+        .logo {
+          width: 3rem;
+        }
+      }
+    }
+  }
+
+  #pedigree {
+    display: none;
+  }
+
+  #how {
+    overflow-x: hidden;
+
+    .title {
+      position: relative;
+      z-index: 10;
+    }
+
+    .decorator {
+      display: none;
+    }
+
+    .item {
+      flex-direction: column;
+
+      &:not(:last-of-type) {
+        margin-bottom: 5rem;
+      }
+
+      .square {
+        width: 6rem;
+        height: 6rem;
+        margin-left: remCalc(10);
+      }
+    }
+  }
+
+  #reviews .content {
+    flex-direction: column;
+    margin-top: 0;
+
+    .review {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #sign-up #email-input {
+    width: 100%;
+  }
+
+  footer {
+    padding: remCalc(60) remCalc(25);
+    grid-template-rows: 1fr;
+    grid-template-columns: initial;
+
+    .socials {
+      justify-content: center;
+      grid-row: 1;
+      margin-bottom: 2rem;
     }
   }
 }
